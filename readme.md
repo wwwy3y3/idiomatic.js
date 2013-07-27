@@ -1,7 +1,7 @@
-# Principles of Writing Consistent, Idiomatic JavaScript
+# 撰寫一個一致、慣用的 JavaScript
 
+## 這個文件永遠歡迎大家給予新想法提昇這份文件。貢獻方式：fork, clone, branch, commit, push, pull request.
 
-## This is a living document and new ideas for improving the code around us are always welcome. Contribute: fork, clone, branch, commit, push, pull request.
 
 * Rick Waldron [@rwaldron](http://twitter.com/rwaldron), [github](https://github.com/rwldrn)
 * Mathias Bynens [@mathias](http://twitter.com/mathias), [github](https://github.com/mathiasbynens)
@@ -29,15 +29,13 @@
 * Stephan Lindauer [@stephanlindauer](http://twitter.com/stephanlindauer), [github](https://github.com/stephanlindauer)
 * Thomas P [@dragon5689](https://twitter.com/dragon5689) [github](https://github.com/dragon5689)
 * Yotam Ofek [@yotamofek](https://twitter.com/yotamofek) [github](https://github.com/yotamofek)
+* Lijung Chi [@chilijung](https://twitter.com/chilijung) [github](https://github.com/chilijung)
 
+## 所有的程式庫應該要像是同一個人所寫出來的，不論有多少人一起貢獻程式
 
+### 下面所用的實例是我用在我的程式中，所有在我的 project 中的貢獻者都要遵守這些原則。
 
-## All code in any code-base should look like a single person typed it, no matter how many people contributed.
-
-### The following list outlines the practices that I use in all code that I am the original author of; contributions to projects that I have created should follow these guidelines.
-
-### I do not intend to impose my style preferences on other people's code or projects; if an existing common style exists, it should be respected.
-
+### 我不會強制用我的程式風格在別人的程式碼或專案中。如果有一個一般性的風格我會尊重。
 
 > ### "Arguments over style are pointless. There should be a style guide, and you should follow it"
 >_Rebecca_ _Murphey_
@@ -47,8 +45,8 @@
 > ### "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec."
 >_Idan_ _Gazit_
 
+## 翻譯
 
-## Translations
 
 * [German](https://github.com/rwldrn/idiomatic.js/tree/master/translations/de_DE)
 * [French](https://github.com/rwldrn/idiomatic.js/tree/master/translations/fr_FR)
@@ -60,13 +58,13 @@
 * [Russian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ru_RU)
 * [Romanian](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ro_RO)
 * [简体中文](https://github.com/rwldrn/idiomatic.js/tree/master/translations/zh_CN)
+* [繁體中文](https://github.com/chilijung/idiomatic.js/tree/master/translations/zh_TW)
 * [Serbian - cyrilic alphabet](https://github.com/rwldrn/idiomatic.js/tree/master/translations/ср_СР)
 * [Serbian - latin aplphabet](https://github.com/rwldrn/idiomatic.js/tree/master/translations/sr_SR)
 
+## 重要、非常通用的資源
 
-## Important, Non-Idiomatic Stuff:
-
-### Code Quality Tools, Resources & References
+### 程式品質工具、資料與文獻
 
  * [JavaScript Plugin](http://docs.codehaus.org/display/SONAR/JavaScript+Plugin) for [Sonar](http://www.sonarsource.org/)
  * [Plato](https://github.com/jsoverson/plato)
@@ -77,12 +75,12 @@
  * [jshint](http://jshint.com/)
  * [jslint](http://jslint.org/)
 
-## Get Smart
+## 變聰明
 
 ### [Annotated ECMAScript 5.1](http://es5.github.com/)
 ### [EcmaScript Language Specification, 5.1 Edition](http://ecma-international.org/ecma-262/5.1/)
 
-The following should be considered 1) incomplete, and 2) *REQUIRED READING*. I don't always agree with the style written by the authors below, but one thing is certain: They are consistent. Furthermore, these are authorities on the language.
+下列的資源： 1)並不完全， 2) *必讀*。雖然我不是每次都認同下面的撰寫風格。但是他們都具有一致性。此外，這些都具有權威性。
 
  * [Baseline For Front End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/)
  * [Eloquent JavaScript](http://eloquentjavascript.net/)
@@ -93,19 +91,14 @@ The following should be considered 1) incomplete, and 2) *REQUIRED READING*. I d
  * [JS Assessment](https://github.com/rmurphey/js-assessment)
  * [Leveraging Code Quality Tools by Anton Kovalyov](http://anton.kovalyov.net/slides/gothamjs/)
 
+### 建構和部屬流程
+
+project 應該都要有一般的程式碼檢驗，測試和壓縮準備給發佈使用。關於這個任務現在已經有由 Ben Alman 所開發的 [grunt](https://github.com/gruntjs/grunt) 屬於第一，已經替代了這個 repo "kits/" 目錄做為官方工具。
 
 
+### 測試工具
 
-### Build & Deployment Process
-
-Projects should always attempt to include some generic means by which source can be linted, tested and compressed in preparation for production use. For this task, [grunt](https://github.com/gruntjs/grunt) by Ben Alman is second to none and has officially replaced the "kits/" directory of this repo.
-
-
-
-
-### Test Facility
-
-Projects _must_ include some form of unit, reference, implementation or functional testing. Use case demos DO NOT QUALIFY as "tests". The following is a list of test frameworks, none of which are endorsed more than the other.
+專案 _必須_ 包含一些 unit, reference, implementation 或是 functional 測試。寫一些 demos 並不代表 "測試"。下面列了一系列的 frameworks, 沒有哪個 framework 比另一個還好。
 
  * [QUnit](http://github.com/jquery/qunit)
  * [Jasmine](https://github.com/pivotal/jasmine)
@@ -116,7 +109,7 @@ Projects _must_ include some form of unit, reference, implementation or function
  * [Buster.js](http://busterjs.org/)
  * [Sinon.js](http://sinonjs.org/)
 
-## Table of Contents
+## 目錄
 
  * [Whitespace](#whitespace)
  * [Beautiful Syntax](#spacing)
@@ -129,44 +122,35 @@ Projects _must_ include some form of unit, reference, implementation or function
  * [Comments](#comments)
  * [One Language Code](#language)
 
+-----------------------------
 
+## 前言
 
-------------------------------------------------
+這個下面的章節提出了一些 _合理的_ 風格指導給 JavaScript 開發，但這些都不是規定。最重要的是 **一致的程式碼撰寫風格**。不論你選擇哪種風格在你的專案中使用都需要有些原則。這個文件是用來建立一個專案一致性、易讀性、可維持性的共識
 
-
-## Preface
-
-The following sections outline a _reasonable_ style guide for modern JavaScript development and are not meant to be prescriptive. The most important take-away is the **law of code style consistency**. Whatever you choose as the style for your project should be considered law. Link to this document as a statement of your project's commitment to code style consistency, readability and maintainability.
-
-
-
-
-
-## Idiomatic Style Manifesto
-
+## 慣用的風格
 
 1. <a name="whitespace">Whitespace</a>
-  - Never mix spaces and tabs.
-  - When beginning a project, before you write any code, choose between soft indents (spaces) or real tabs, consider this **law**.
-      - For readability, I always recommend setting your editor's indent size to two characters &mdash; this means two spaces or two spaces representing a real tab.
-  - If your editor supports it, always work with the "show invisibles" setting turned on. The benefits of this practice are:
-      - Enforced consistency
-      - Eliminating end of line whitespace
-      - Eliminating blank line whitespace
-      - Commits and diffs that are easier to read
+    - 永遠不要把 spaces 和 tabs 混著用。
+    - 在開始專案前，請先選擇要用 spaces 或是用 real tabs，根據這個 **規則**
+        - 為了易讀性，我一直建議設定你的編輯器到縮排兩個字元 &mdash，這代表兩個 spaces 或是兩個空格代表一個 tab。
 
+    - 如果你的編輯器，開著 "顯示不可見字符" 這個設定，的好處是：
+        - 一致性
+        - 去掉行末的空白
+        - 去掉空行的空格
+        - 提交或比對更易讀
 
 2. <a name="spacing">Beautiful Syntax</a>
-
-    A. Parens, Braces, Linebreaks
+    A. 小括號、大括號、換行
 
     ```javascript
 
-    // if/else/for/while/try always have spaces, braces and span multiple lines
-    // this encourages readability
+    // if/else/for/while/try 同常有小括號、大括號和多行
+    // 有助於易讀性
 
     // 2.A.1.1
-    // Examples of really cramped syntax
+    // 難辨是的語法
 
     if(condition) doSomething();
 
@@ -176,7 +160,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
     // 2.A.1.1
-    // Use whitespace to promote readability
+    // 用空白來增進易讀性
 
     if ( condition ) {
       // statements
@@ -190,7 +174,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       // statements
     }
 
-    // Even better:
+    // 更好的方式：
 
     var i,
       length = 100;
@@ -199,7 +183,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
       // statements
     }
 
-    // Or...
+    // 或是：
 
     var i = 0,
       length = 100;
@@ -222,32 +206,31 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     }
     ```
 
-
-    B. Assignments, Declarations, Functions ( Named, Expression, Constructor )
+    B. 賦值、宣告、函式 ( 命名, 表達式, 建構式 )
 
     ```javascript
 
     // 2.B.1.1
-    // Variables
+    // 變數
     var foo = "bar",
       num = 1,
       undef;
 
-    // Literal notations:
+    // 字元符號：
     var array = [],
       object = {};
 
 
     // 2.B.1.2
-    // Using only one `var` per scope (function) promotes readability
-    // and keeps your declaration list free of clutter (also saves a few keystrokes)
+    // 只用一個 `var` 在一個 function 中增進易讀性。
+    // 並且讓你的宣告更清楚（也減少了一些 keystrokes）
 
-    // Bad
+    // 不好
     var foo = "";
     var bar = "";
     var qux;
 
-    // Good
+    // 好
     var foo = "",
       bar = "",
       quux;
@@ -259,10 +242,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     quux;
 
     // 2.B.1.3
-    // var statements should always be in the beginning of their respective scope (function).
-    // Same goes for const and let from ECMAScript 6.
+    // var 的宣告應一直在一開始的 scope。
+    // 同樣的應用來自於 ECMAScript 6 的變數
 
-    // Bad
+    // 不好
     function foo() {
 
       // some statements here
@@ -271,7 +254,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
         qux;
     }
 
-    // Good
+    // 好
     function foo() {
       var bar = "",
         qux;
@@ -283,22 +266,22 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```javascript
 
     // 2.B.2.1
-    // Named Function Declaration
+    // 命名函式宣告
     function foo( arg1, argN ) {
 
     }
 
-    // Usage
+    // 用法
     foo( arg1, argN );
 
 
     // 2.B.2.2
-    // Named Function Declaration
+    // 命名函式宣告
     function square( number ) {
       return number * number;
     }
 
-    // Usage
+    // 用法
     square( 10 );
 
     // Really contrived continuation passing style
@@ -312,9 +295,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
     // 2.B.2.3
-    // Function Expression
+    // 函式表達式
     var square = function( number ) {
-      // Return something valuable and relevant
+      // 返回有值的和相關的
       return number * number;
     };
 
@@ -331,56 +314,53 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
     // 2.B.2.4
-    // Constructor Declaration
+    // 函式宣告
     function FooBar( options ) {
 
       this.options = options;
     }
 
-    // Usage
+    // 使用
     var fooBar = new FooBar({ a: "alpha" });
 
     fooBar.options;
     // { a: "alpha" }
 
     ```
-
-
-    C. Exceptions, Slight Deviations
+    C. 例外，些微的不同
 
     ```javascript
 
     // 2.C.1.1
-    // Functions with callbacks
+    // 函式與 callback 函式
     foo(function() {
-      // Note there is no extra space between the first paren
-      // of the executing function call and the word "function"
+      // 注意第一個函式的小括號和 `function` 沒有空格
     });
 
-    // Function accepting an array, no space
+    // 函式接受 `array` 作為一個參數，沒有空格
     foo([ "alpha", "beta" ]);
 
     // 2.C.1.2
-    // Function accepting an object, no space
+    // 函式接受 `object` 作為一個參數，沒有空格
     foo({
       a: "alpha",
       b: "beta"
     });
 
-    // Single argument string literal, no space
+    // 單一一個變數，沒有空格
     foo("bar");
 
-    // Inner grouping parens, no space
+    // 分組用的小括號內部，沒有空格
     if ( !("foo" in obj) ) {
 
     }
 
     ```
 
-    D. Consistency Always Wins
+    D. 一致性
 
-    In sections 2.A-2.C, the whitespace rules are set forth as a recommendation with a simpler, higher purpose: consistency.
-    It's important to note that formatting preferences, such as "inner whitespace" should be considered optional, but only one style should exist across the entire source of your project.
+    在 2.A-2.C 中, 空白建議用四個，用來簡化和更高的目的：一致性。
+    這是非常重要的規格喜好，像是 "inner whitespace" 應該是個 optional，但是應該只有一個風格橫跨所有的企劃。
 
     ```javascript
 
@@ -406,17 +386,18 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```
 
-    E. Quotes
+    E. 引號
 
-    Whether you prefer single or double shouldn't matter, there is no difference in how JavaScript parses them. What **ABSOLUTELY MUST** be enforced is consistency. **Never mix quotes in the same project. Pick one style and stick with it.**
+    不論你使用的是雙引號或是單引號都可以，在 JavaScript 中沒有差別。最重要的是要保持一致性。 **絕對不要同時混著兩個用，選擇了一個就保持下去。**
 
-    F. End of Lines and Empty Lines
 
-    Whitespace can ruin diffs and make changesets impossible to read. Consider incorporating a pre-commit hook that removes end-of-line whitespace and blanks spaces on empty lines automatically.
+    F. 行末和空行
 
-3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
+    留白會破壞區別使得更困難閱讀。考慮包含一個 pre-commit hook 來移除行末的空白和空白行。
 
-    A. Actual Types
+    3. <a name="type">Type Checking (Courtesy jQuery Core Style Guidelines)</a>
+
+    A. 實際類型
 
     String:
 
@@ -467,11 +448,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
         object.hasOwnProperty( prop )
         "prop" in object
 
-    B. Coerced Types
+    B. 轉換類型
 
-    Consider the implications of the following...
+    思考下面這些的含意
 
-    Given this HTML:
+    給定 HTML:
 
     ```html
 
@@ -484,20 +465,20 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     // 3.B.1.1
 
-    // `foo` has been declared with the value `0` and its type is `number`
+    // `foo` 被賦予值 `0` 他的類別為 `number`
     var foo = 0;
 
     // typeof foo;
     // "number"
     ...
 
-    // Somewhere later in your code, you need to update `foo`
-    // with a new value derived from an input element
+    // 後續的程式中，你要更新 `foo`
+    // 賦予他一個新的值
 
     foo = document.getElementById("foo-input").value;
 
-    // If you were to test `typeof foo` now, the result would be `string`
-    // This means that if you had logic that tested `foo` like:
+    // 如果你現在測試 `typeof foo` ，結果應該是 `string`
+    // 這代表如果你要測試 `foo` 像是：
 
     if ( foo === 1 ) {
 
@@ -505,15 +486,15 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     }
 
-    // `importantTask()` would never be evaluated, even though `foo` has a value of "1"
+    // `importantTask()` 永遠不會執行, 因為 `foo` 被認定為 "1"
 
 
     // 3.B.1.2
 
-    // You can preempt issues by using smart coercion with unary + or - operators:
+    // 你可以用巧妙的方式 + / - 來強制轉換類型
 
     foo = +document.getElementById("foo-input").value;
-    //    ^ unary + operator will convert its right side operand to a number
+    //    ^ + 易完運算會把右邊的運算對象轉為 `number`
 
     // typeof foo;
     // "number"
@@ -524,10 +505,10 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     }
 
-    // `importantTask()` will be called
+    // `importantTask()` 會被呼叫
     ```
 
-    Here are some common cases along with coercions:
+    對於強制類型轉換這裡有些例子：
 
 
     ```javascript
@@ -613,9 +594,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     !!~array.indexOf("d");
     // false
 
-    // Note that the above should be considered "unnecessarily clever"
-    // Prefer the obvious approach of comparing the returned value of
-    // indexOf, like:
+    // 上面都是 "不必要的聰明"
+    // 用比較明確的方案來返回值
+    // 像是 indexOf:
 
     if ( array.indexOf( "a" ) >= 0 ) {
       // ...
@@ -630,7 +611,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     parseInt( num, 10 );
 
-    // is the same as...
+    // 同等...
 
     ~~num;
 
@@ -638,23 +619,23 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     num >>> 0;
 
-    // All result in 2
+    // 結果 2
 
 
-    // Keep in mind however, that negative numbers will be treated differently...
+    // 記得負數的結果會完全不一樣...
 
     var neg = -2.5;
 
     parseInt( neg, 10 );
 
-    // is the same as...
+    // 同等於...
 
     ~~neg;
 
     neg >> 0;
 
     // All result in -2
-    // However...
+    // 然而...
 
     neg >>> 0;
 
@@ -672,91 +653,89 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```javascript
 
     // 4.1.1
-    // When only evaluating that an array has length,
-    // instead of this:
+    // 判斷一個 array 有沒有 length，相對於下面的：
     if ( array.length > 0 ) ...
 
-    // ...evaluate truthiness, like this:
+    // 請使用這個
     if ( array.length ) ...
 
 
     // 4.1.2
-    // When only evaluating that an array is empty,
-    // instead of this:
+    // 你要判斷一個 array 是否回空，相對於這個：
     if ( array.length === 0 ) ...
 
-    // ...evaluate truthiness, like this:
+    // 請使用這個
     if ( !array.length ) ...
 
 
     // 4.1.3
-    // When only evaluating that a string is not empty,
-    // instead of this:
+    // 判斷一個 string 是否為空，相對於這個：
     if ( string !== "" ) ...
 
-    // ...evaluate truthiness, like this:
+    // 請使用這個
     if ( string ) ...
 
 
     // 4.1.4
-    // When only evaluating that a string _is_ empty,
-    // instead of this:
+    // 判斷一個 sting 是空值，相對於這個
     if ( string === "" ) ...
 
-    // ...evaluate falsy-ness, like this:
+    // 判斷真假，請使用這個
     if ( !string ) ...
 
 
     // 4.1.5
-    // When only evaluating that a reference is true,
-    // instead of this:
+    // 當只是判斷一個參數是真
+    // 與其用這個：
     if ( foo === true ) ...
 
-    // ...evaluate like you mean it, take advantage of built in capabilities:
+    // ...判斷像你所想的，更好的是用：
     if ( foo ) ...
 
 
     // 4.1.6
-    // When evaluating that a reference is false,
-    // instead of this:
+    // 當要判斷他為假
+    // 與其用這個：
     if ( foo === false ) ...
 
-    // ...use negation to coerce a true evaluation
+    // 用 negation 來強迫用 ture 的方式定義
     if ( !foo ) ...
 
-    // ...Be careful, this will also match: 0, "", null, undefined, NaN
-    // If you _MUST_ test for a boolean false, then use
+    // ...注意，這些都會符合： 0, "", null, undefined, NaN
+    // 你 _必須_ 測試 boolean false，的時候用：
     if ( foo === false ) ...
 
 
     // 4.1.7
-    // When only evaluating a ref that might be null or undefined, but NOT false, "" or 0,
-    // instead of this:
+    // 如果要確定一個參數可能為 null 或是 undefined, 但 NOT false, "" 或 0,
+    // 與其用這個：
     if ( foo === null || foo === undefined ) ...
 
-    // ...take advantage of == type coercion, like this:
+    // ...建議用 == type 來強制，像是：
     if ( foo == null ) ...
 
-    // Remember, using == will match a `null` to BOTH `null` and `undefined`
-    // but not `false`, "" or 0
+    // 記得使用 == 這會符合 `null` 同時在 `null` 和 `undefined` 的情形下
+    // 但不會在 `false`, "" or 0
     null == undefined
 
     ```
     ALWAYS evaluate for the best, most accurate result - the above is a guideline, not a dogma.
 
+    永遠 evaluate 最好是越精確、越明確越好 - 以上都是 guideline，不是教條。
+
     ```javascript
 
     // 4.2.1
-    // Type coercion and evaluation notes
+    // 強迫轉型和值的比較
 
-    // Prefer `===` over `==` (unless the case requires loose type evaluation)
+    //  `===` 較 `==` 好 (除非你需要的是更寬鬆的比較)
 
-    // === does not coerce type, which means that:
+    // === 不會強迫轉型，這代表
 
     "1" === 1;
     // false
 
-    // == does coerce type, which means that:
+    // == 做強迫轉型，這代表：
 
     "1" == 1;
     // true
@@ -782,7 +761,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```javascript
 
     // 5.1.1
-    // A Practical Module
+    // 一個實用的模組
 
     (function( global ) {
       var Module = (function() {
@@ -823,7 +802,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```javascript
 
     // 5.2.1
-    // A Practical Constructor
+    // 一個實用的建構式
 
     (function( global ) {
 
@@ -860,11 +839,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 6. <a name="naming">Naming</a>
 
+    A. 人不是 compiler/comperessor，所以不要試著變成機器。
 
-
-    A. You are not a human code compiler/compressor, so don't try to be one.
-
-    The following code is an example of egregious naming:
+    下面的 code 是在示範過度的命名方式：
 
     ```javascript
 
@@ -878,9 +855,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     for(i=0;i<els.length;i++){a.push(els[i]);}
     ```
 
-    Without a doubt, you've written code like this - hopefully that ends today.
+    不要懷疑，如果你現在還在寫類似這樣的程式 - 希望可以在今天停止
 
-    Here's the same piece of logic, but with kinder, more thoughtful naming (and a readable structure):
+    這裡有相同的邏輯程式，但是用比較好、和易懂的命名方式（和一個易讀的架構）
 
     ```javascript
 
@@ -902,7 +879,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```
 
-    A few additional naming pointers:
+    此外一些其他的命名：
 
     ```javascript
 
@@ -919,25 +896,25 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 
     // 6.A.3.3
-    // Naming functions, objects, instances, etc
+    // 命名 functions, objects, instances, etc
 
     camelCase; function and var declarations
 
 
     // 6.A.3.4
-    // Naming constructors, prototypes, etc.
+    // 命名 constructors, prototypes, etc.
 
     PascalCase; constructor function
 
 
     // 6.A.3.5
-    // Naming regular expressions
+    // 命名 regular expressions
 
     rDesc = //;
 
 
     // 6.A.3.6
-    // From the Google Closure Library Style Guide
+    // 從 Google Closure Library 程式風格指導：
 
     functionNamesLikeThis;
     variableNamesLikeThis;
@@ -948,9 +925,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```
 
-    B. Faces of `this`
+    B. 面對 `this`
 
-    Beyond the generally well known use cases of `call` and `apply`, always prefer `.bind( this )` or a functional equivalent, for creating `BoundFunction` definitions for later invocation. Only resort to aliasing when no preferable option is available.
+    除了大家都知道的 `call` 和 `apply`外，總是優先選擇 `.bind( this )` 或是一個功能上等於他的。 創一個 `BoundFunction` 的宣告給予後續的調度。當沒有比較好的選擇的時候才使用別名。
 
     ```javascript
 
@@ -959,8 +936,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
       this.value = null;
 
-      // open an async stream,
-      // this will be called continuously
+      // 開啟一個非同步的 stream,
+      // 這會被持續的呼叫
       stream.read( opts.path, function( data ) {
 
         // Update this instance's current value
@@ -983,6 +960,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     // Just pretend we've inherited EventEmitter ;)
 
     ```
+
+    當不能運行，同樣功能的 `.bind` 在不同的 JavaScript 函式庫中都有出現
 
     When unavailable, functional equivalents to `.bind` exist in many modern JavaScript libraries.
 
@@ -1048,6 +1027,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     As a last resort, create an alias to `this` using `self` as an Identifier. This is extremely bug prone and should be avoided whenever possible.
 
+    提供一個候選，創一個 `this` 的別名用 `self` 來當做辨識。這很有可能會造成 bug ，盡可能要避免。
+
     ```javascript
 
     // 6.B.3
@@ -1073,9 +1054,9 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     ```
 
 
-    C. Use `thisArg`
+    C. 使用 `thisArg`
 
-    Several prototype methods of ES 5.1 built-ins come with a special `thisArg` signature, which should be used whenever possible
+    好幾個 ES 5.1 prototype 的方法都內建了一個特殊的 `thisArg` 標記, 盡可能的避免使用他
 
     ```javascript
 
@@ -1101,18 +1082,18 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```
 
-    `thisArg` can be used with `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
+    `thisArg` 可以被用在 `Array.prototype.every`, `Array.prototype.forEach`, `Array.prototype.some`, `Array.prototype.map`, `Array.prototype.filter`
 
 7. <a name="misc">Misc</a>
 
-    This section will serve to illustrate ideas and concepts that should not be considered dogma, but instead exists to encourage questioning practices in an attempt to find better ways to do common JavaScript programming tasks.
+    這個部分會說明一些想法和概念，但這些都不是教條。相反的鼓勵對現在的用法保持好奇，且嘗試完成用更好了 JavaScript 的程式任務。
 
-    A. Using `switch` should be avoided, modern method tracing will blacklist functions with switch statements
+    A. 避免使用 `switch`，modern method tracing 會把 switch 的表達是列為黑名單。
 
-    There seems to be drastic improvements to the execution of `switch` statements in latest releases of Firefox and Chrome.
+    目前似乎對新版本的 Firefox 和 chrome 對 `switch` 表達式都有改進。
     http://jsperf.com/switch-vs-object-literal-vs-module
 
-    Notable improvements can be witnesses here as well:
+    值得注意的是，改進的可以在這裡看到：
     https://github.com/rwldrn/idiomatic.js/issues/13
 
     ```javascript
@@ -1133,8 +1114,8 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
     }
 
     // 7.A.1.2
-    // A alternate approach that supports composability and reusability is to
-    // use an object to store "cases" and a function to delegate:
+    // 一個支持組合和重複使用的方法是用 object 儲存 "cases" 和一個 function 來調用。
+
 
     var cases, delegator;
 
@@ -1216,7 +1197,7 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
     ```
 
-    B. Early returns promote code readability with negligible performance difference
+    B. 提早的 returns 提昇了程式的易讀性和些微的效能差別
 
     ```javascript
 
@@ -1248,11 +1229,11 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 8. <a name="native">Native & Host Objects</a>
 
-    The basic principle here is:
+   最基本的原則： 
 
-    ### Don't do stupid shit and everything will be ok.
+    ### 別做蠢事，所有的東西都是可以接受的
 
-    To reinforce this concept, please watch the following presentation:
+    為了加強這個概念，請觀看下列的演說：
 
     #### “Everything is Permitted: Extending Built-ins” by Andrew Dupont (JSConf2011, Portland, Oregon)
 
@@ -1263,21 +1244,21 @@ The following sections outline a _reasonable_ style guide for modern JavaScript 
 
 9. <a name="comments">Comments</a>
 
-    #### Single line above the code that is subject
-    #### Multiline is good
-    #### End of line comments are prohibited!
-    #### JSDoc style is good, but requires a significant time investment
+    #### 如果是一行的話，就在那行的上面 comment
+    #### 多行 comment 很好
+    #### 在最後一行做 comment 是禁止的。
+    #### JSDoc 的 comment 是好的，但是需要花費比較多的時間
 
 
 10. <a name="language">One Language Code</a>
 
-    Programs should be written in one language, whatever that language may be, as dictated by the maintainer or maintainers.
+    程式應該都要用同一個語言編寫，不論是哪一種語言，那個決定權決定於維護者。
 
 ## Appendix
 
 ### Comma First.
 
-Any project that cites this document as its base style guide will not accept comma first code formatting, unless explicitly specified otherwise by that project's author.
+所有只用這個風格指南的 project 都不允許用前置的逗號代碼格式，除非是明確的指定或作者要求。
 
 
 
